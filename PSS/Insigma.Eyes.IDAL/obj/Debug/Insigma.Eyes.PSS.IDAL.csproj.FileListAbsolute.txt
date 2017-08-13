@@ -1,0 +1,14 @@
+H:\进销存系统\Insigma.Eyes.PSS\Insigma.Eyes.IDAL\bin\Debug\Insigma.Eyes.PSS.IDAL.dll
+H:\进销存系统\Insigma.Eyes.PSS\Insigma.Eyes.IDAL\bin\Debug\Insigma.Eyes.PSS.IDAL.pdb
+H:\进销存系统\Insigma.Eyes.PSS\Insigma.Eyes.IDAL\bin\Debug\Insigma.Eyes.PSS.Model.dll
+H:\进销存系统\Insigma.Eyes.PSS\Insigma.Eyes.IDAL\bin\Debug\Insigma.Eyes.PSS.Model.pdb
+H:\进销存系统\Insigma.Eyes.PSS\Insigma.Eyes.IDAL\obj\Debug\Insigma.Eyes.PSS.IDAL.csprojResolveAssemblyReference.cache
+H:\进销存系统\Insigma.Eyes.PSS\Insigma.Eyes.IDAL\obj\Debug\Insigma.Eyes.PSS.IDAL.dll
+H:\进销存系统\Insigma.Eyes.PSS\Insigma.Eyes.IDAL\obj\Debug\Insigma.Eyes.PSS.IDAL.pdb
+D:\code\PSS\Insigma.Eyes.IDAL\bin\Debug\Insigma.Eyes.PSS.IDAL.dll
+D:\code\PSS\Insigma.Eyes.IDAL\bin\Debug\Insigma.Eyes.PSS.IDAL.pdb
+D:\code\PSS\Insigma.Eyes.IDAL\bin\Debug\Insigma.Eyes.PSS.Model.dll
+D:\code\PSS\Insigma.Eyes.IDAL\bin\Debug\Insigma.Eyes.PSS.Model.pdb
+D:\code\PSS\Insigma.Eyes.IDAL\obj\Debug\Insigma.Eyes.PSS.IDAL.csprojResolveAssemblyReference.cache
+D:\code\PSS\Insigma.Eyes.IDAL\obj\Debug\Insigma.Eyes.PSS.IDAL.dll
+D:\code\PSS\Insigma.Eyes.IDAL\obj\Debug\Insigma.Eyes.PSS.IDAL.pdb

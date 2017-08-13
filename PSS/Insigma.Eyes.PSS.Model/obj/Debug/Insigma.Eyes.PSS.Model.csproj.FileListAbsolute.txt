@@ -1,0 +1,8 @@
+H:\进销存系统\Insigma.Eyes.PSS\Insigma.Eyes.PSS.Model\bin\Debug\Insigma.Eyes.PSS.Model.dll
+H:\进销存系统\Insigma.Eyes.PSS\Insigma.Eyes.PSS.Model\bin\Debug\Insigma.Eyes.PSS.Model.pdb
+H:\进销存系统\Insigma.Eyes.PSS\Insigma.Eyes.PSS.Model\obj\Debug\Insigma.Eyes.PSS.Model.dll
+H:\进销存系统\Insigma.Eyes.PSS\Insigma.Eyes.PSS.Model\obj\Debug\Insigma.Eyes.PSS.Model.pdb
+D:\code\PSS\Insigma.Eyes.PSS.Model\bin\Debug\Insigma.Eyes.PSS.Model.dll
+D:\code\PSS\Insigma.Eyes.PSS.Model\bin\Debug\Insigma.Eyes.PSS.Model.pdb
+D:\code\PSS\Insigma.Eyes.PSS.Model\obj\Debug\Insigma.Eyes.PSS.Model.dll
+D:\code\PSS\Insigma.Eyes.PSS.Model\obj\Debug\Insigma.Eyes.PSS.Model.pdb

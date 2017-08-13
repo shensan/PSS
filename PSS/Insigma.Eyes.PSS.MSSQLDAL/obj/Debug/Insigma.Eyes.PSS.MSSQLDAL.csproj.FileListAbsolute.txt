@@ -1,0 +1,11 @@
+D:\code\PSS\Insigma.Eyes.PSS.MSSQLDAL\bin\Debug\Insigma.Eyes.PSS.MSSQLDAL.dll
+D:\code\PSS\Insigma.Eyes.PSS.MSSQLDAL\bin\Debug\Insigma.Eyes.PSS.MSSQLDAL.pdb
+D:\code\PSS\Insigma.Eyes.PSS.MSSQLDAL\bin\Debug\Insigma.Eyes.PSS.AbstractFactory.dll
+D:\code\PSS\Insigma.Eyes.PSS.MSSQLDAL\bin\Debug\Insigma.Eyes.PSS.IDAL.dll
+D:\code\PSS\Insigma.Eyes.PSS.MSSQLDAL\bin\Debug\Insigma.Eyes.PSS.Model.dll
+D:\code\PSS\Insigma.Eyes.PSS.MSSQLDAL\bin\Debug\Insigma.Eyes.PSS.IDAL.pdb
+D:\code\PSS\Insigma.Eyes.PSS.MSSQLDAL\bin\Debug\Insigma.Eyes.PSS.AbstractFactory.pdb
+D:\code\PSS\Insigma.Eyes.PSS.MSSQLDAL\bin\Debug\Insigma.Eyes.PSS.Model.pdb
+D:\code\PSS\Insigma.Eyes.PSS.MSSQLDAL\obj\Debug\Insigma.Eyes.PSS.MSSQLDAL.csprojResolveAssemblyReference.cache
+D:\code\PSS\Insigma.Eyes.PSS.MSSQLDAL\obj\Debug\Insigma.Eyes.PSS.MSSQLDAL.dll
+D:\code\PSS\Insigma.Eyes.PSS.MSSQLDAL\obj\Debug\Insigma.Eyes.PSS.MSSQLDAL.pdb

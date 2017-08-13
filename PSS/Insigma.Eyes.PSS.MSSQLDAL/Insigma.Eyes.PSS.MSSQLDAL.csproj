@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8509BB0B-8182-4090-9FA4-F172B8F99BCA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Insigma.Eyes.PSS.MSSQLDAL</RootNamespace>
+    <AssemblyName>Insigma.Eyes.PSS.MSSQLDAL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomerService.cs" />
+    <Compile Include="ManufacturerService.cs" />
+    <Compile Include="CommodityService.cs" />
+    <Compile Include="DalMSSqlFactory.cs" />
+    <Compile Include="MSSqlHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchaseCommodityService.cs" />
+    <Compile Include="PurchaseOrderService.cs" />
+    <Compile Include="SalesCommodityService.cs" />
+    <Compile Include="SalesOrderService.cs" />
+    <Compile Include="UserService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Insigma.Eyes.IDAL\Insigma.Eyes.PSS.IDAL.csproj">
+      <Project>{c41e0bfd-a793-44dd-b362-1c3bee124090}</Project>
+      <Name>Insigma.Eyes.PSS.IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Insigma.Eyes.PSS.AbstractFactory\Insigma.Eyes.PSS.AbstractFactory.csproj">
+      <Project>{1e3717aa-d529-436f-927e-6bea79388f59}</Project>
+      <Name>Insigma.Eyes.PSS.AbstractFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Insigma.Eyes.PSS.Model\Insigma.Eyes.PSS.Model.csproj">
+      <Project>{43d38eb2-84ae-451b-954e-db7e6f457ad4}</Project>
+      <Name>Insigma.Eyes.PSS.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
