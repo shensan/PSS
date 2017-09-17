@@ -80,11 +80,23 @@
     <Compile Include="Controls\AddSalesOrder.Designer.cs">
       <DependentUpon>AddSalesOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\BaseConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\BaseConfig.Designer.cs">
+      <DependentUpon>BaseConfig.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Inventory.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\Inventory.Designer.cs">
       <DependentUpon>Inventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProductManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ProductManage.Designer.cs">
+      <DependentUpon>ProductManage.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\Purchase.cs">
       <SubType>UserControl</SubType>
@@ -109,6 +121,12 @@
     </Compile>
     <Compile Include="Controls\SelectCustomer.Designer.cs">
       <DependentUpon>SelectCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SummaryManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SummaryManage.Designer.cs">
+      <DependentUpon>SummaryManage.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
@@ -166,8 +184,14 @@
     <EmbeddedResource Include="Controls\AddSalesOrder.resx">
       <DependentUpon>AddSalesOrder.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\BaseConfig.resx">
+      <DependentUpon>BaseConfig.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\Inventory.resx">
       <DependentUpon>Inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ProductManage.resx">
+      <DependentUpon>ProductManage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Purchase.resx">
       <DependentUpon>Purchase.cs</DependentUpon>
@@ -180,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\SelectCustomer.resx">
       <DependentUpon>SelectCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SummaryManage.resx">
+      <DependentUpon>SummaryManage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
