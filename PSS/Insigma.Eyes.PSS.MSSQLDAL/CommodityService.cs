@@ -11,6 +11,7 @@ namespace Insigma.Eyes.PSS.MSSQLDAL
 {
     public class CommodityService:ICommodityService
     {
+        #region 处理商品数据
         public List<Model.CommodityModel> GetEntities(string sqlWhere)
         {
             string sql = string.Format("select * from View_Commodity where 1=1 {0}", sqlWhere);
@@ -76,6 +77,80 @@ namespace Insigma.Eyes.PSS.MSSQLDAL
             string sql = string.Format("delete form Commodity where 1=1 {0}", sqlWhere);
             return MSSqlHelper.ExecuteNonQuery(MSSqlHelper.ConStr, CommandType.Text, sql, null) > 0;
         }
+        #endregion 处理商品数据
 
+        #region 处理单位数据
+        public List<UnitModel> GetUnitEntities(string sqlWhere)
+        {
+            string sql = string.Format("select id,name,status,mark,line from unit where 1=1 {0}", sqlWhere);
+            sql = sql + " order by line";
+            List<UnitModel> listUnits = new List<UnitModel>();
+            //Using 限定对象使用的范围在花括号里面，出了花括号后释放资源
+            using (SqlDataReader odr = MSSqlHelper.ExecuteReader(MSSqlHelper.ConStr, CommandType.Text, sql, null))
+            {
+                while (odr.Read())
+                {
+                    UnitModel unit = new UnitModel();
+                    unit.ID = odr.GetInt32(0);
+                    unit.Name = odr.GetString(1);
+                    unit.Status = odr.GetString(2) == "1" ? "激活" : "未激活";
+                    unit.Mark = odr.IsDBNull(3) ? "" : odr.GetString(3);
+                    unit.Line = odr.GetInt32(4);
+                    listUnits.Add(unit);
+                }
+            }
+            return listUnits;
+        }
+
+        public bool AddUnitEntity(UnitModel entity)
+        {
+            string sql = string.Format(@"insert into unit(name,line) values() values('{0}',{1})", entity.Name, entity.Line);
+            return MSSqlHelper.ExecuteNonQuery(MSSqlHelper.ConStr, CommandType.Text, sql, null) > 0;
+        }
+
+        public bool UpdateUnitEntity(UnitModel entity)
+        {
+            string sql = string.Format(@"update unit set name='{0}',line={1} where ID={2}", entity.Name, entity.Line, entity.ID);
+            return MSSqlHelper.ExecuteNonQuery(MSSqlHelper.ConStr, CommandType.Text, sql, null) > 0;
+        }
+
+        #endregion 处理单位数据
+
+        #region 处理商品类型数据
+        public List<TypeModel> GetTypeEntities(string sqlWhere)
+        {
+            string sql = string.Format("select id,name,status,mark,line from commodityType where 1=1 {0}", sqlWhere);
+            sql = sql + " order by line";
+            List<TypeModel> listTypes = new List<TypeModel>();
+            //Using 限定对象使用的范围在花括号里面，出了花括号后释放资源
+            using (SqlDataReader odr = MSSqlHelper.ExecuteReader(MSSqlHelper.ConStr, CommandType.Text, sql, null))
+            {
+                while (odr.Read())
+                {
+                    TypeModel type = new TypeModel();
+                    type.ID = odr.GetInt32(0);
+                    type.Name = odr.GetString(1);
+                    type.Status = odr.GetString(2) == "1" ? "激活" : "未激活";
+                    type.Mark = odr.IsDBNull(3) ? "" : odr.GetString(3);
+                    type.Line = odr.GetInt32(4);
+                    listTypes.Add(type);
+                }
+            }
+            return listTypes;
+        }
+
+        public bool AddTypeEntity(TypeModel entity)
+        {
+            string sql = string.Format(@"insert into commodityType(name,line) values() values('{0}',{1})", entity.Name, entity.Line);
+            return MSSqlHelper.ExecuteNonQuery(MSSqlHelper.ConStr, CommandType.Text, sql, null) > 0;
+        }
+
+        public bool UpdateTypeEntity(TypeModel entity)
+        {
+            string sql = string.Format(@"update commodityType set name='{0}',line={1} where ID={2}", entity.Name, entity.Line, entity.ID);
+            return MSSqlHelper.ExecuteNonQuery(MSSqlHelper.ConStr, CommandType.Text, sql, null) > 0;
+        }
+
+        #endregion 处理商品类型数据
     }
 }

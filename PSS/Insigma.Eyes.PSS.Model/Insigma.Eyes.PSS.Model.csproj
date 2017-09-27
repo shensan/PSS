@@ -50,6 +50,8 @@
     <Compile Include="PurchaseOrdersModel.cs" />
     <Compile Include="SalesCommodityModel.cs" />
     <Compile Include="SalesOrdersModel.cs" />
+    <Compile Include="TypeModel.cs" />
+    <Compile Include="UnitModel.cs" />
     <Compile Include="UserModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

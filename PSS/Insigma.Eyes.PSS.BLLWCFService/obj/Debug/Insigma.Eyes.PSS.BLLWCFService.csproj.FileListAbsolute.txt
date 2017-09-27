@@ -25,3 +25,17 @@ D:\code\PSS\Insigma.Eyes.PSS.BLLWCFService\obj\Debug\Insigma.Eyes.PSS.BLLWCFServ
 D:\code\PSS\Insigma.Eyes.PSS.BLLWCFService\obj\Debug\Insigma.Eyes.PSS.BLLWCFService.pdb
 D:\code\PSS\Insigma.Eyes.PSS.BLLWCFService\bin\Insigma.Eyes.PSS.MSSQLDAL.dll
 D:\code\PSS\Insigma.Eyes.PSS.BLLWCFService\bin\Insigma.Eyes.PSS.MSSQLDAL.pdb
+E:\gitReposirity\PSS\PSS\Insigma.Eyes.PSS.BLLWCFService\bin\Insigma.Eyes.PSS.BLLWCFService.dll.config
+E:\gitReposirity\PSS\PSS\Insigma.Eyes.PSS.BLLWCFService\bin\Insigma.Eyes.PSS.BLLWCFService.dll
+E:\gitReposirity\PSS\PSS\Insigma.Eyes.PSS.BLLWCFService\bin\Insigma.Eyes.PSS.BLLWCFService.pdb
+E:\gitReposirity\PSS\PSS\Insigma.Eyes.PSS.BLLWCFService\bin\Insigma.Eyes.PSS.AbstractFactory.dll
+E:\gitReposirity\PSS\PSS\Insigma.Eyes.PSS.BLLWCFService\bin\Insigma.Eyes.PSS.IDAL.dll
+E:\gitReposirity\PSS\PSS\Insigma.Eyes.PSS.BLLWCFService\bin\Insigma.Eyes.PSS.Model.dll
+E:\gitReposirity\PSS\PSS\Insigma.Eyes.PSS.BLLWCFService\bin\Insigma.Eyes.PSS.MSSQLDAL.dll
+E:\gitReposirity\PSS\PSS\Insigma.Eyes.PSS.BLLWCFService\bin\Insigma.Eyes.PSS.IDAL.pdb
+E:\gitReposirity\PSS\PSS\Insigma.Eyes.PSS.BLLWCFService\bin\Insigma.Eyes.PSS.AbstractFactory.pdb
+E:\gitReposirity\PSS\PSS\Insigma.Eyes.PSS.BLLWCFService\bin\Insigma.Eyes.PSS.Model.pdb
+E:\gitReposirity\PSS\PSS\Insigma.Eyes.PSS.BLLWCFService\obj\Debug\Insigma.Eyes.PSS.BLLWCFService.csprojResolveAssemblyReference.cache
+E:\gitReposirity\PSS\PSS\Insigma.Eyes.PSS.BLLWCFService\obj\Debug\Insigma.Eyes.PSS.BLLWCFService.dll
+E:\gitReposirity\PSS\PSS\Insigma.Eyes.PSS.BLLWCFService\obj\Debug\Insigma.Eyes.PSS.BLLWCFService.pdb
+E:\gitReposirity\PSS\PSS\Insigma.Eyes.PSS.BLLWCFService\bin\Insigma.Eyes.PSS.MSSQLDAL.pdb

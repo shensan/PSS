@@ -17,10 +17,10 @@ namespace Insigma.Eyes.PSS.BLLWCFService
         {
             dataFactory = DefaultProviderDal.DefaultDataProviderFactory;
         }
-        
-        
-        
-        
+
+
+        #region 处理商品
+
         public Model.CommodityModel[] GetCommodities(string name, string type, string manufacturer, string priceLow, string priceHigh)
         {
             string sqlWhere = "";
@@ -115,6 +115,78 @@ namespace Insigma.Eyes.PSS.BLLWCFService
             return dataFactory.CommdityDal.UpdateEntity(commodity);
         }
 
+        #endregion 处理商品
+
+
+        #region 处理基本数据中单位数据
+
+        public UnitModel[] GetCommdityUnits()
+        {
+            string sqlWhere = "";
+            
+            //ICommodityService commodityService = new OracleDAL.CommodityService();
+            //return commodityService.GetEntities(sqlWhere).ToArray();
+            return dataFactory.CommdityDal.GetUnitEntities(sqlWhere).ToArray();
+        }
+
+        public bool AddCommdityUnit(UnitModel oneUnit)
+        {
+            if (string.IsNullOrWhiteSpace(oneUnit.Name))
+            {
+                Exception oe = new Exception();
+                throw new FaultException<Exception>(oe, "商品名称不能为空");
+            }
+            return dataFactory.CommdityDal.AddUnitEntity(oneUnit);
+        }
+
+
+        public bool UpdateCommdityUnit(UnitModel oneUnit)
+        {
+            if (string.IsNullOrWhiteSpace(oneUnit.Name))
+            {
+                Exception oe = new Exception();
+                throw new FaultException<Exception>(oe, "商品名称不能为空");
+            }
+            //return new OracleDAL.CommodityService().UpdateEntity(commodity) ;
+            return dataFactory.CommdityDal.UpdateUnitEntity(oneUnit);
+        }
+
+        #endregion 处理基本数据中单位数据
+
+        #region 处理基本数据中商品类型数据
+        public TypeModel[] GetCommdityTypes()
+        {
+            string sqlWhere = "";
+
+            //ICommodityService commodityService = new OracleDAL.CommodityService();
+            //return commodityService.GetEntities(sqlWhere).ToArray();
+            return dataFactory.CommdityDal.GetTypeEntities(sqlWhere).ToArray();
+        }
+
+        public bool AddCommdityType(TypeModel oneType)
+        {
+            if (string.IsNullOrWhiteSpace(oneType.Name))
+            {
+                Exception oe = new Exception();
+                throw new FaultException<Exception>(oe, "商品名称不能为空");
+            }
+            return dataFactory.CommdityDal.AddTypeEntity(oneType);
+        }
+
+
+        public bool UpdateCommdityType(TypeModel oneType)
+        {
+            if (string.IsNullOrWhiteSpace(oneType.Name))
+            {
+                Exception oe = new Exception();
+                throw new FaultException<Exception>(oe, "商品名称不能为空");
+            }
+            //return new OracleDAL.CommodityService().UpdateEntity(commodity) ;
+            return dataFactory.CommdityDal.UpdateTypeEntity(oneType);
+        }
+        #endregion 处理基本数据中商品类型数据
+
+        #region 处理基本数据中供应商与厂商数据
         /// <summary>
         /// 供应商与厂商
         /// </summary>
@@ -159,6 +231,6 @@ namespace Insigma.Eyes.PSS.BLLWCFService
 
         //public bool UpdateManufacturer(Model.ManufacturerModel manufacturer)
         //{ }
-
+        #endregion 处理基本数据中供应商与厂商数据
     }
 }

@@ -16,7 +16,7 @@ namespace Insigma.Eyes.PSS.WinUI
             InitializeComponent();
         }
         /// <summary>
-        /// 库存管理
+        /// 基础数据配置
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -24,7 +24,7 @@ namespace Insigma.Eyes.PSS.WinUI
         {
             if (AppParams.CurrentUser.Role==0||AppParams.CurrentUser.Role==3)
             {
-                LoadControls.LoadInventory(panelContainer);
+                LoadControls.LoadBaseConfig(panelContainer);
             }
             else
             {
@@ -76,6 +76,40 @@ namespace Insigma.Eyes.PSS.WinUI
             if (login.LogType == 2)//登录失败
             {
                 this.Close();
+            }
+        }
+
+        /// <summary>
+        /// 产品维护界面
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            if (AppParams.CurrentUser.Role == 0 || AppParams.CurrentUser.Role == 2)
+            {
+                LoadControls.LoadProductManage(panelContainer);
+            }
+            else
+            {
+                MessageBox.Show("你没有权限");
+            }
+        }
+
+        /// <summary>
+        /// 数据汇总界面
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            if (AppParams.CurrentUser.Role == 0 || AppParams.CurrentUser.Role == 2)
+            {
+                LoadControls.LoadSummaryManage(panelContainer);
+            }
+            else
+            {
+                MessageBox.Show("你没有权限");
             }
         }
     }

@@ -40,45 +40,47 @@
             this.label4 = new System.Windows.Forms.Label();
             this.tbMName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvManu = new System.Windows.Forms.DataGridView();
             this.tsManufacturer = new System.Windows.Forms.ToolStrip();
             this.tsbMFind = new System.Windows.Forms.ToolStripButton();
             this.tsbMAdd = new System.Windows.Forms.ToolStripButton();
             this.tsbMDel = new System.Windows.Forms.ToolStripButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tbTypeLine = new System.Windows.Forms.TextBox();
             this.tbTypeName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvType = new System.Windows.Forms.DataGridView();
             this.tsType = new System.Windows.Forms.ToolStrip();
             this.tsbTypeFind = new System.Windows.Forms.ToolStripButton();
             this.tsbTypeAdd = new System.Windows.Forms.ToolStripButton();
             this.tsbTypeDel = new System.Windows.Forms.ToolStripButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tbUnitLine = new System.Windows.Forms.TextBox();
             this.tbUnitName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvUnit = new System.Windows.Forms.DataGridView();
+            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colUnitLine = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColUnitMark = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tsUnit = new System.Windows.Forms.ToolStrip();
             this.tsbUnitFind = new System.Windows.Forms.ToolStripButton();
             this.tsbUnitAdd = new System.Windows.Forms.ToolStripButton();
             this.tsbUnitDel = new System.Windows.Forms.ToolStripButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colUnitLine = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTypeId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTypeStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTypeLine = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.ColTypeMark = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage1.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvManu)).BeginInit();
             this.tsManufacturer.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvType)).BeginInit();
             this.tsType.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUnit)).BeginInit();
@@ -110,7 +112,7 @@
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.tbMName);
             this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.dataGridView2);
+            this.groupBox3.Controls.Add(this.dgvManu);
             this.groupBox3.Controls.Add(this.tsManufacturer);
             this.groupBox3.Location = new System.Drawing.Point(3, 305);
             this.groupBox3.Name = "groupBox3";
@@ -187,15 +189,17 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "商家名称：";
             // 
-            // dataGridView2
+            // dgvManu
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 42);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 23;
-            this.dataGridView2.Size = new System.Drawing.Size(757, 150);
-            this.dataGridView2.TabIndex = 1;
+            this.dgvManu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvManu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dgvManu.Location = new System.Drawing.Point(3, 42);
+            this.dgvManu.MultiSelect = false;
+            this.dgvManu.Name = "dgvManu";
+            this.dgvManu.ReadOnly = true;
+            this.dgvManu.RowTemplate.Height = 23;
+            this.dgvManu.Size = new System.Drawing.Size(757, 150);
+            this.dgvManu.TabIndex = 1;
             // 
             // tsManufacturer
             // 
@@ -235,10 +239,10 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.tbTypeLine);
             this.groupBox2.Controls.Add(this.tbTypeName);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.Controls.Add(this.dgvType);
             this.groupBox2.Controls.Add(this.tsType);
             this.groupBox2.Location = new System.Drawing.Point(387, 6);
             this.groupBox2.Name = "groupBox2";
@@ -246,6 +250,14 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "类型配置";
+            // 
+            // tbTypeLine
+            // 
+            this.tbTypeLine.Font = new System.Drawing.Font("宋体", 11F);
+            this.tbTypeLine.Location = new System.Drawing.Point(273, 272);
+            this.tbTypeLine.Name = "tbTypeLine";
+            this.tbTypeLine.Size = new System.Drawing.Size(100, 24);
+            this.tbTypeLine.TabIndex = 6;
             // 
             // tbTypeName
             // 
@@ -265,26 +277,30 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "类型名称：";
             // 
-            // dataGridView1
+            // dgvType
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvType.AllowUserToAddRows = false;
+            this.dgvType.AllowUserToDeleteRows = false;
+            this.dgvType.AllowUserToOrderColumns = true;
+            this.dgvType.AllowUserToResizeRows = false;
+            this.dgvType.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvType.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colTypeId,
             this.colTypeName,
             this.colTypeStatus,
-            this.colTypeLine});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 42);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(373, 226);
-            this.dataGridView1.TabIndex = 1;
+            this.colTypeLine,
+            this.ColTypeMark});
+            this.dgvType.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dgvType.Location = new System.Drawing.Point(3, 42);
+            this.dgvType.MultiSelect = false;
+            this.dgvType.Name = "dgvType";
+            this.dgvType.ReadOnly = true;
+            this.dgvType.RowHeadersVisible = false;
+            this.dgvType.RowTemplate.Height = 23;
+            this.dgvType.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvType.Size = new System.Drawing.Size(373, 226);
+            this.dgvType.TabIndex = 1;
+            this.dgvType.Click += new System.EventHandler(this.dgvType_Click);
             // 
             // tsType
             // 
@@ -305,6 +321,7 @@
             this.tsbTypeFind.Name = "tsbTypeFind";
             this.tsbTypeFind.Size = new System.Drawing.Size(52, 22);
             this.tsbTypeFind.Text = "查询";
+            this.tsbTypeFind.Click += new System.EventHandler(this.tsbTypeFind_Click);
             // 
             // tsbTypeAdd
             // 
@@ -324,7 +341,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.tbUnitLine);
             this.groupBox1.Controls.Add(this.tbUnitName);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.dgvUnit);
@@ -335,6 +352,14 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "单位配置";
+            // 
+            // tbUnitLine
+            // 
+            this.tbUnitLine.Font = new System.Drawing.Font("宋体", 11F);
+            this.tbUnitLine.Location = new System.Drawing.Point(273, 272);
+            this.tbUnitLine.Name = "tbUnitLine";
+            this.tbUnitLine.Size = new System.Drawing.Size(100, 24);
+            this.tbUnitLine.TabIndex = 4;
             // 
             // tbUnitName
             // 
@@ -365,16 +390,53 @@
             this.colId,
             this.colName,
             this.colStatus,
-            this.colUnitLine});
+            this.colUnitLine,
+            this.ColUnitMark});
             this.dgvUnit.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgvUnit.Location = new System.Drawing.Point(3, 42);
             this.dgvUnit.MultiSelect = false;
             this.dgvUnit.Name = "dgvUnit";
+            this.dgvUnit.ReadOnly = true;
             this.dgvUnit.RowHeadersVisible = false;
             this.dgvUnit.RowTemplate.Height = 23;
             this.dgvUnit.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUnit.Size = new System.Drawing.Size(373, 226);
             this.dgvUnit.TabIndex = 1;
+            this.dgvUnit.Click += new System.EventHandler(this.dgvUnit_Click);
+            // 
+            // colId
+            // 
+            this.colId.DataPropertyName = "id";
+            this.colId.HeaderText = "ID";
+            this.colId.Name = "colId";
+            this.colId.Width = 50;
+            // 
+            // colName
+            // 
+            this.colName.DataPropertyName = "name";
+            this.colName.HeaderText = "名称";
+            this.colName.Name = "colName";
+            this.colName.Width = 150;
+            // 
+            // colStatus
+            // 
+            this.colStatus.DataPropertyName = "status";
+            this.colStatus.HeaderText = "状态";
+            this.colStatus.Name = "colStatus";
+            // 
+            // colUnitLine
+            // 
+            this.colUnitLine.DataPropertyName = "line";
+            this.colUnitLine.HeaderText = "序号";
+            this.colUnitLine.Name = "colUnitLine";
+            this.colUnitLine.Width = 60;
+            // 
+            // ColUnitMark
+            // 
+            this.ColUnitMark.DataPropertyName = "Mark";
+            this.ColUnitMark.HeaderText = "Mark";
+            this.ColUnitMark.Name = "ColUnitMark";
+            this.ColUnitMark.Visible = false;
             // 
             // tsUnit
             // 
@@ -395,6 +457,7 @@
             this.tsbUnitFind.Name = "tsbUnitFind";
             this.tsbUnitFind.Size = new System.Drawing.Size(52, 22);
             this.tsbUnitFind.Text = "查询";
+            this.tsbUnitFind.Click += new System.EventHandler(this.tsbUnitFind_Click);
             // 
             // tsbUnitAdd
             // 
@@ -429,38 +492,12 @@
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "config_24.ico");
             // 
-            // colId
-            // 
-            this.colId.DataPropertyName = "id";
-            this.colId.HeaderText = "ID";
-            this.colId.Name = "colId";
-            this.colId.Width = 50;
-            // 
-            // colName
-            // 
-            this.colName.DataPropertyName = "name";
-            this.colName.HeaderText = "名称";
-            this.colName.Name = "colName";
-            this.colName.Width = 150;
-            // 
-            // colStatus
-            // 
-            this.colStatus.DataPropertyName = "status";
-            this.colStatus.HeaderText = "状态";
-            this.colStatus.Name = "colStatus";
-            // 
-            // colUnitLine
-            // 
-            this.colUnitLine.DataPropertyName = "line";
-            this.colUnitLine.HeaderText = "序号";
-            this.colUnitLine.Name = "colUnitLine";
-            this.colUnitLine.Width = 60;
-            // 
             // colTypeId
             // 
             this.colTypeId.DataPropertyName = "id";
             this.colTypeId.HeaderText = "ID";
             this.colTypeId.Name = "colTypeId";
+            this.colTypeId.ReadOnly = true;
             this.colTypeId.Width = 50;
             // 
             // colTypeName
@@ -468,6 +505,7 @@
             this.colTypeName.DataPropertyName = "name";
             this.colTypeName.HeaderText = "名称";
             this.colTypeName.Name = "colTypeName";
+            this.colTypeName.ReadOnly = true;
             this.colTypeName.Width = 150;
             // 
             // colTypeStatus
@@ -475,29 +513,23 @@
             this.colTypeStatus.DataPropertyName = "status";
             this.colTypeStatus.HeaderText = "状态";
             this.colTypeStatus.Name = "colTypeStatus";
+            this.colTypeStatus.ReadOnly = true;
             // 
             // colTypeLine
             // 
             this.colTypeLine.DataPropertyName = "line";
             this.colTypeLine.HeaderText = "序号";
             this.colTypeLine.Name = "colTypeLine";
+            this.colTypeLine.ReadOnly = true;
             this.colTypeLine.Width = 60;
             // 
-            // textBox1
+            // ColTypeMark
             // 
-            this.textBox1.Font = new System.Drawing.Font("宋体", 11F);
-            this.textBox1.Location = new System.Drawing.Point(273, 272);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 24);
-            this.textBox1.TabIndex = 4;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("宋体", 11F);
-            this.textBox2.Location = new System.Drawing.Point(273, 272);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 24);
-            this.textBox2.TabIndex = 6;
+            this.ColTypeMark.DataPropertyName = "Mark";
+            this.ColTypeMark.HeaderText = "Mark";
+            this.ColTypeMark.Name = "ColTypeMark";
+            this.ColTypeMark.ReadOnly = true;
+            this.ColTypeMark.Visible = false;
             // 
             // BaseConfig
             // 
@@ -509,12 +541,12 @@
             this.tabPage1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvManu)).EndInit();
             this.tsManufacturer.ResumeLayout(false);
             this.tsManufacturer.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvType)).EndInit();
             this.tsType.ResumeLayout(false);
             this.tsType.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -555,23 +587,25 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbMName;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvManu;
         private System.Windows.Forms.TextBox tbTypeName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvType;
         private System.Windows.Forms.TextBox tbUnitName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvUnit;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTypeId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTypeName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTypeStatus;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTypeLine;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbTypeLine;
+        private System.Windows.Forms.TextBox tbUnitLine;
         private System.Windows.Forms.DataGridViewTextBoxColumn colId;
         private System.Windows.Forms.DataGridViewTextBoxColumn colName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colStatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn colUnitLine;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColUnitMark;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTypeId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTypeName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTypeStatus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTypeLine;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColTypeMark;
 
     }
 }

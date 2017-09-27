@@ -18,7 +18,7 @@ namespace Insigma.Eyes.PSS.BLLWCFService
             string dllFileName = System.Configuration.ConfigurationManager.AppSettings["DataProviderDllFile"];
             string dalFactoryClassName = System.Configuration.ConfigurationManager.AppSettings["DataProviderFactoryName"];
             //System.Reflection.Assembly dll = System.Reflection.Assembly.LoadFile(filePath + "DataProvider\\" + dllFileName);
-            System.Reflection.Assembly dll = System.Reflection.Assembly.LoadFile( "D:\\code\\PSS\\Insigma.Eyes.PSS.MSSQLDAL\\bin\\Debug\\" + dllFileName);
+            System.Reflection.Assembly dll = System.Reflection.Assembly.LoadFile("E:\\gitReposirity\\PSS\\PSS\\Insigma.Eyes.PSS.MSSQLDAL\\bin\\Debug\\" + dllFileName);
 
             instance = dll.CreateInstance(dalFactoryClassName) as AbstractFactory.DalFactory;
         }

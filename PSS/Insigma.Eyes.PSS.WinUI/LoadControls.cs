@@ -9,13 +9,32 @@ namespace Insigma.Eyes.PSS.WinUI
 {
     public class LoadControls
     {
-        public static void LoadInventory(Control parent)
+        /// <summary>
+        /// 加载基础配置界面
+        /// </summary>
+        /// <param name="parent"></param>
+        public static void LoadBaseConfig(Control parent)
         {
             parent.Controls.Clear();
-            Inventory inventory = new Inventory();
-            inventory.Dock = DockStyle.Fill;
-            parent.Controls.Add(inventory);
+            BaseConfig baseConfig = new BaseConfig();
+            baseConfig.Dock = DockStyle.Fill;
+            parent.Controls.Add(baseConfig);
         }
+        /// <summary>
+        /// 加载产品维护界面
+        /// </summary>
+        /// <param name="parent"></param>
+        public static void LoadProductManage(Control parent)
+        {
+            parent.Controls.Clear();
+            ProductManage productManage = new ProductManage();
+            productManage.Dock = DockStyle.Fill;
+            parent.Controls.Add(productManage);
+        }
+        /// <summary>
+        /// 加载进货界面
+        /// </summary>
+        /// <param name="parent"></param>
         public static void LoadPurchase(Control parent)
         {
             parent.Controls.Clear();
@@ -23,12 +42,27 @@ namespace Insigma.Eyes.PSS.WinUI
             purchase.Dock = DockStyle.Fill;
             parent.Controls.Add(purchase);
         }
+        /// <summary>
+        /// 加载销售界面
+        /// </summary>
+        /// <param name="parent"></param>
         public static void LoadSales(Control parent)
         {
             parent.Controls.Clear();
             Sales sales = new Sales();
             sales.Dock = DockStyle.Fill;
             parent.Controls.Add(sales);
+        }
+        /// <summary>
+        /// 加载数据汇总界面
+        /// </summary>
+        /// <param name="parent"></param>
+        public static void LoadSummaryManage(Control parent)
+        {
+            parent.Controls.Clear();
+            SummaryManage summaryManage = new SummaryManage();
+            summaryManage.Dock = DockStyle.Fill;
+            parent.Controls.Add(summaryManage);
         }
     }
 }

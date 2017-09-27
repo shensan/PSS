@@ -47,6 +47,60 @@
   <wsdl:message name="ICommodityManagerService_UpdateCommodity_ExceptionFault_FaultMessage">
     <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/System" name="detail" element="q3:Exception" />
   </wsdl:message>
+  <wsdl:message name="ICommodityManagerService_GetCommdityUnits_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommdityUnits" />
+  </wsdl:message>
+  <wsdl:message name="ICommodityManagerService_GetCommdityUnits_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommdityUnitsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommodityManagerService_GetCommdityUnits_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/System" name="detail" element="q4:Exception" />
+  </wsdl:message>
+  <wsdl:message name="ICommodityManagerService_AddCommdityUnit_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCommdityUnit" />
+  </wsdl:message>
+  <wsdl:message name="ICommodityManagerService_AddCommdityUnit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCommdityUnitResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommodityManagerService_AddCommdityUnit_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/System" name="detail" element="q5:Exception" />
+  </wsdl:message>
+  <wsdl:message name="ICommodityManagerService_UpdateCommdityUnit_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCommdityUnit" />
+  </wsdl:message>
+  <wsdl:message name="ICommodityManagerService_UpdateCommdityUnit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCommdityUnitResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommodityManagerService_UpdateCommdityUnit_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/System" name="detail" element="q6:Exception" />
+  </wsdl:message>
+  <wsdl:message name="ICommodityManagerService_GetCommdityTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommdityTypes" />
+  </wsdl:message>
+  <wsdl:message name="ICommodityManagerService_GetCommdityTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommdityTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommodityManagerService_GetCommdityTypes_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/System" name="detail" element="q7:Exception" />
+  </wsdl:message>
+  <wsdl:message name="ICommodityManagerService_AddCommdityType_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCommdityType" />
+  </wsdl:message>
+  <wsdl:message name="ICommodityManagerService_AddCommdityType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCommdityTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommodityManagerService_AddCommdityType_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/System" name="detail" element="q8:Exception" />
+  </wsdl:message>
+  <wsdl:message name="ICommodityManagerService_UpdateCommdityType_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCommdityType" />
+  </wsdl:message>
+  <wsdl:message name="ICommodityManagerService_UpdateCommdityType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCommdityTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommodityManagerService_UpdateCommdityType_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/System" name="detail" element="q9:Exception" />
+  </wsdl:message>
   <wsdl:message name="ICommodityManagerService_GetManufacturers_InputMessage">
     <wsdl:part name="parameters" element="tns:GetManufacturers" />
   </wsdl:message>
@@ -54,7 +108,7 @@
     <wsdl:part name="parameters" element="tns:GetManufacturersResponse" />
   </wsdl:message>
   <wsdl:message name="ICommodityManagerService_GetManufacturers_ExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/System" name="detail" element="q4:Exception" />
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/System" name="detail" element="q10:Exception" />
   </wsdl:message>
   <wsdl:portType name="ICommodityManagerService">
     <wsdl:operation name="GetCommodities">
@@ -79,6 +133,36 @@
       <wsdl:input wsaw:Action="http://tempuri.org/ICommodityManagerService/UpdateCommodity" message="tns:ICommodityManagerService_UpdateCommodity_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICommodityManagerService/UpdateCommodityResponse" message="tns:ICommodityManagerService_UpdateCommodity_OutputMessage" />
       <wsdl:fault wsaw:Action="http://tempuri.org/ICommodityManagerService/UpdateCommodityExceptionFault" name="ExceptionFault" message="tns:ICommodityManagerService_UpdateCommodity_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommdityUnits">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommodityManagerService/GetCommdityUnits" message="tns:ICommodityManagerService_GetCommdityUnits_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommodityManagerService/GetCommdityUnitsResponse" message="tns:ICommodityManagerService_GetCommdityUnits_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICommodityManagerService/GetCommdityUnitsExceptionFault" name="ExceptionFault" message="tns:ICommodityManagerService_GetCommdityUnits_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCommdityUnit">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommodityManagerService/AddCommdityUnit" message="tns:ICommodityManagerService_AddCommdityUnit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommodityManagerService/AddCommdityUnitResponse" message="tns:ICommodityManagerService_AddCommdityUnit_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICommodityManagerService/AddCommdityUnitExceptionFault" name="ExceptionFault" message="tns:ICommodityManagerService_AddCommdityUnit_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCommdityUnit">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommodityManagerService/UpdateCommdityUnit" message="tns:ICommodityManagerService_UpdateCommdityUnit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommodityManagerService/UpdateCommdityUnitResponse" message="tns:ICommodityManagerService_UpdateCommdityUnit_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICommodityManagerService/UpdateCommdityUnitExceptionFault" name="ExceptionFault" message="tns:ICommodityManagerService_UpdateCommdityUnit_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommdityTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommodityManagerService/GetCommdityTypes" message="tns:ICommodityManagerService_GetCommdityTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommodityManagerService/GetCommdityTypesResponse" message="tns:ICommodityManagerService_GetCommdityTypes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICommodityManagerService/GetCommdityTypesExceptionFault" name="ExceptionFault" message="tns:ICommodityManagerService_GetCommdityTypes_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCommdityType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommodityManagerService/AddCommdityType" message="tns:ICommodityManagerService_AddCommdityType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommodityManagerService/AddCommdityTypeResponse" message="tns:ICommodityManagerService_AddCommdityType_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICommodityManagerService/AddCommdityTypeExceptionFault" name="ExceptionFault" message="tns:ICommodityManagerService_AddCommdityType_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCommdityType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommodityManagerService/UpdateCommdityType" message="tns:ICommodityManagerService_UpdateCommdityType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommodityManagerService/UpdateCommdityTypeResponse" message="tns:ICommodityManagerService_UpdateCommdityType_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICommodityManagerService/UpdateCommdityTypeExceptionFault" name="ExceptionFault" message="tns:ICommodityManagerService_UpdateCommdityType_ExceptionFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetManufacturers">
       <wsdl:input wsaw:Action="http://tempuri.org/ICommodityManagerService/GetManufacturers" message="tns:ICommodityManagerService_GetManufacturers_InputMessage" />
@@ -132,6 +216,78 @@
     </wsdl:operation>
     <wsdl:operation name="UpdateCommodity">
       <soap:operation soapAction="http://tempuri.org/ICommodityManagerService/UpdateCommodity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommdityUnits">
+      <soap:operation soapAction="http://tempuri.org/ICommodityManagerService/GetCommdityUnits" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddCommdityUnit">
+      <soap:operation soapAction="http://tempuri.org/ICommodityManagerService/AddCommdityUnit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCommdityUnit">
+      <soap:operation soapAction="http://tempuri.org/ICommodityManagerService/UpdateCommdityUnit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommdityTypes">
+      <soap:operation soapAction="http://tempuri.org/ICommodityManagerService/GetCommdityTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddCommdityType">
+      <soap:operation soapAction="http://tempuri.org/ICommodityManagerService/AddCommdityType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCommdityType">
+      <soap:operation soapAction="http://tempuri.org/ICommodityManagerService/UpdateCommdityType" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

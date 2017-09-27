@@ -33,6 +33,30 @@ namespace Insigma.Eyes.PSS.WinUI.BLLCommodity {
         [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/ICommodityManagerService/UpdateCommodityExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
         bool UpdateCommodity(Insigma.Eyes.PSS.Model.CommodityModel commodity);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICommodityManagerService/GetCommdityUnits", ReplyAction="http://tempuri.org/ICommodityManagerService/GetCommdityUnitsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/ICommodityManagerService/GetCommdityUnitsExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        Insigma.Eyes.PSS.Model.UnitModel[] GetCommdityUnits();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICommodityManagerService/AddCommdityUnit", ReplyAction="http://tempuri.org/ICommodityManagerService/AddCommdityUnitResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/ICommodityManagerService/AddCommdityUnitExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        bool AddCommdityUnit(Insigma.Eyes.PSS.Model.UnitModel oneUnit);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICommodityManagerService/UpdateCommdityUnit", ReplyAction="http://tempuri.org/ICommodityManagerService/UpdateCommdityUnitResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/ICommodityManagerService/UpdateCommdityUnitExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        bool UpdateCommdityUnit(Insigma.Eyes.PSS.Model.UnitModel oneUnit);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICommodityManagerService/GetCommdityTypes", ReplyAction="http://tempuri.org/ICommodityManagerService/GetCommdityTypesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/ICommodityManagerService/GetCommdityTypesExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        Insigma.Eyes.PSS.Model.TypeModel[] GetCommdityTypes();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICommodityManagerService/AddCommdityType", ReplyAction="http://tempuri.org/ICommodityManagerService/AddCommdityTypeResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/ICommodityManagerService/AddCommdityTypeExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        bool AddCommdityType(Insigma.Eyes.PSS.Model.TypeModel oneType);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICommodityManagerService/UpdateCommdityType", ReplyAction="http://tempuri.org/ICommodityManagerService/UpdateCommdityTypeResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/ICommodityManagerService/UpdateCommdityTypeExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        bool UpdateCommdityType(Insigma.Eyes.PSS.Model.TypeModel oneType);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICommodityManagerService/GetManufacturers", ReplyAction="http://tempuri.org/ICommodityManagerService/GetManufacturersResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/ICommodityManagerService/GetManufacturersExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
         Insigma.Eyes.PSS.Model.ManufacturerModel[] GetManufacturers(string name, string person, string tel, string addr, string status);
@@ -83,6 +107,30 @@ namespace Insigma.Eyes.PSS.WinUI.BLLCommodity {
         
         public bool UpdateCommodity(Insigma.Eyes.PSS.Model.CommodityModel commodity) {
             return base.Channel.UpdateCommodity(commodity);
+        }
+        
+        public Insigma.Eyes.PSS.Model.UnitModel[] GetCommdityUnits() {
+            return base.Channel.GetCommdityUnits();
+        }
+        
+        public bool AddCommdityUnit(Insigma.Eyes.PSS.Model.UnitModel oneUnit) {
+            return base.Channel.AddCommdityUnit(oneUnit);
+        }
+        
+        public bool UpdateCommdityUnit(Insigma.Eyes.PSS.Model.UnitModel oneUnit) {
+            return base.Channel.UpdateCommdityUnit(oneUnit);
+        }
+        
+        public Insigma.Eyes.PSS.Model.TypeModel[] GetCommdityTypes() {
+            return base.Channel.GetCommdityTypes();
+        }
+        
+        public bool AddCommdityType(Insigma.Eyes.PSS.Model.TypeModel oneType) {
+            return base.Channel.AddCommdityType(oneType);
+        }
+        
+        public bool UpdateCommdityType(Insigma.Eyes.PSS.Model.TypeModel oneType) {
+            return base.Channel.UpdateCommdityType(oneType);
         }
         
         public Insigma.Eyes.PSS.Model.ManufacturerModel[] GetManufacturers(string name, string person, string tel, string addr, string status) {

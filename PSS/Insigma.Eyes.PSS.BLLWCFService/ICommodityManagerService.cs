@@ -32,6 +32,30 @@ namespace Insigma.Eyes.PSS.BLLWCFService
 
         [OperationContract]
         [FaultContract(typeof(Exception))]
+        UnitModel[] GetCommdityUnits();
+
+        [OperationContract]
+        [FaultContract(typeof(Exception))]
+        bool AddCommdityUnit(UnitModel oneUnit);
+
+        [OperationContract]
+        [FaultContract(typeof(Exception))]
+        bool UpdateCommdityUnit(UnitModel oneUnit);
+
+        [OperationContract]
+        [FaultContract(typeof(Exception))]
+        TypeModel[] GetCommdityTypes();
+
+        [OperationContract]
+        [FaultContract(typeof(Exception))]
+        bool AddCommdityType(TypeModel oneType);
+
+        [OperationContract]
+        [FaultContract(typeof(Exception))]
+        bool UpdateCommdityType(TypeModel oneType);
+
+        [OperationContract]
+        [FaultContract(typeof(Exception))]
         ManufacturerModel[] GetManufacturers(string name, string person, string tel, string addr, string status);
 
         //[OperationContract]

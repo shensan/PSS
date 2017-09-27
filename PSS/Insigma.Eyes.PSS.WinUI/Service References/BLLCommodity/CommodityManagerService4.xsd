@@ -22,6 +22,38 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="CommodityModel" nillable="true" type="tns:CommodityModel" />
+  <xs:complexType name="ArrayOfUnitModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UnitModel" nillable="true" type="tns:UnitModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUnitModel" nillable="true" type="tns:ArrayOfUnitModel" />
+  <xs:complexType name="UnitModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Line" type="xs:int" />
+      <xs:element minOccurs="0" name="Mark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UnitModel" nillable="true" type="tns:UnitModel" />
+  <xs:complexType name="ArrayOfTypeModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TypeModel" nillable="true" type="tns:TypeModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTypeModel" nillable="true" type="tns:ArrayOfTypeModel" />
+  <xs:complexType name="TypeModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Line" type="xs:int" />
+      <xs:element minOccurs="0" name="Mark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TypeModel" nillable="true" type="tns:TypeModel" />
   <xs:complexType name="ArrayOfManufacturerModel">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="ManufacturerModel" nillable="true" type="tns:ManufacturerModel" />
