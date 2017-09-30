@@ -60,6 +60,14 @@ namespace Insigma.Eyes.PSS.WinUI.BLLCommodity {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICommodityManagerService/GetManufacturers", ReplyAction="http://tempuri.org/ICommodityManagerService/GetManufacturersResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/ICommodityManagerService/GetManufacturersExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
         Insigma.Eyes.PSS.Model.ManufacturerModel[] GetManufacturers(string name, string person, string tel, string addr, string status);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICommodityManagerService/AddManufacturer", ReplyAction="http://tempuri.org/ICommodityManagerService/AddManufacturerResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/ICommodityManagerService/AddManufacturerExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        Insigma.Eyes.PSS.Model.ManufacturerModel AddManufacturer(Insigma.Eyes.PSS.Model.ManufacturerModel oneManufacturer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICommodityManagerService/UpdateManufacturer", ReplyAction="http://tempuri.org/ICommodityManagerService/UpdateManufacturerResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/ICommodityManagerService/UpdateManufacturerExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        bool UpdateManufacturer(Insigma.Eyes.PSS.Model.ManufacturerModel manufacturer);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -135,6 +143,14 @@ namespace Insigma.Eyes.PSS.WinUI.BLLCommodity {
         
         public Insigma.Eyes.PSS.Model.ManufacturerModel[] GetManufacturers(string name, string person, string tel, string addr, string status) {
             return base.Channel.GetManufacturers(name, person, tel, addr, status);
+        }
+        
+        public Insigma.Eyes.PSS.Model.ManufacturerModel AddManufacturer(Insigma.Eyes.PSS.Model.ManufacturerModel oneManufacturer) {
+            return base.Channel.AddManufacturer(oneManufacturer);
+        }
+        
+        public bool UpdateManufacturer(Insigma.Eyes.PSS.Model.ManufacturerModel manufacturer) {
+            return base.Channel.UpdateManufacturer(manufacturer);
         }
     }
 }

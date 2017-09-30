@@ -15,6 +15,8 @@ namespace Insigma.Eyes.PSS.WinUI.Controls
     {
         private UnitModel curUnitObj;
         private TypeModel curTypeObj;
+        private ManufacturerModel curManufacturerObj;
+        CommodityManagerServiceClient client = WCFServiceBLL.GetCommodityService();
 
         public BaseConfig()
         {
@@ -34,12 +36,75 @@ namespace Insigma.Eyes.PSS.WinUI.Controls
 
         private void findUnit()
         {
-            CommodityManagerServiceClient client = WCFServiceBLL.GetCommodityService();
+            tbUnitName.Text = "";
+            tbUnitLine.Text = "";
+            curUnitObj = null;
+            //CommodityManagerServiceClient client = WCFServiceBLL.GetCommodityService();
             List<Model.UnitModel> listUnits = client.GetCommdityUnits().ToList();
 
-            dgvUnit.Rows.Clear();
+            //dgvUnit.Rows.Clear();
             dgvUnit.DataSource = listUnits;
             dgvUnit.ClearSelection();
+        }
+
+        private void tsbUnitAdd_Click(object sender, EventArgs e)
+        {
+            bool ret = false;
+            if (curUnitObj != null)
+            {
+                curUnitObj.Name = tbUnitName.Text;
+                curUnitObj.Line = Convert.ToInt32(tbUnitLine.Text);
+                ret=client.UpdateCommdityUnit(curUnitObj);
+            }
+            else
+            {
+                curUnitObj = new UnitModel();
+                curUnitObj.Name = tbUnitName.Text;
+                curUnitObj.Line = Convert.ToInt32(tbUnitLine.Text);
+                ret = client.AddCommdityUnit(curUnitObj);
+            }
+            if (ret)
+            {
+                MessageBox.Show("操作成功");
+                findUnit();
+            }
+            else
+            {
+                MessageBox.Show("操作失败");
+            }
+        }
+
+        private void tsbUnitDel_Click(object sender, EventArgs e)
+        {
+            bool ret = false;
+            if (curUnitObj != null)
+            {
+                if(curUnitObj.Status=="1")
+                {
+                    curUnitObj.Status="0";
+                }
+                else
+                {
+                    curUnitObj.Status = "1";
+                }
+                
+                ret = client.UpdateCommdityUnit(curUnitObj);
+            }
+            else
+            {
+                MessageBox.Show("请选中要删除记录！");
+                return;
+            }
+            if (ret)
+            {
+                MessageBox.Show("操作成功");
+                findUnit();
+            }
+            else
+            {
+                MessageBox.Show("操作失败");
+            }
+            
         }
 
         private void dgvUnit_Click(object sender, EventArgs e)
@@ -90,13 +155,76 @@ namespace Insigma.Eyes.PSS.WinUI.Controls
 
         private void findType()
         {
-            CommodityManagerServiceClient client = WCFServiceBLL.GetCommodityService();
+            tbTypeName.Text = "";
+            tbTypeLine.Text = "";
+            curTypeObj = null;
+            //CommodityManagerServiceClient client = WCFServiceBLL.GetCommodityService();
             List<Model.TypeModel> listTypes = client.GetCommdityTypes().ToList();
 
-            dgvType.Rows.Clear();
+            //dgvType.Rows.Clear();
             dgvType.DataSource = listTypes;
             dgvType.ClearSelection();
         }
+
+        private void tsbTypeAdd_Click(object sender, EventArgs e)
+        {
+            bool ret = false;
+            if (curTypeObj != null)
+            {
+                curTypeObj.Name = tbTypeName.Text;
+                curTypeObj.Line = Convert.ToInt32(tbTypeLine.Text);
+                ret = client.UpdateCommdityType(curTypeObj);
+            }
+            else
+            {
+                curTypeObj = new  TypeModel();
+                curTypeObj.Name = tbTypeName.Text;
+                curTypeObj.Line = Convert.ToInt32(tbTypeLine.Text);
+                ret = client.AddCommdityType(curTypeObj);
+            }
+            if (ret)
+            {
+                MessageBox.Show("操作成功");
+                findType();
+            }
+            else
+            {
+                MessageBox.Show("操作失败");
+            }
+        }
+
+        private void tsbTypeDel_Click(object sender, EventArgs e)
+        {
+            bool ret = false;
+            if (curTypeObj != null)
+            {
+                if (curTypeObj.Status == "1")
+                {
+                    curTypeObj.Status = "0";
+                }
+                else
+                {
+                    curTypeObj.Status = "1";
+                }
+
+                ret = client.UpdateCommdityType(curTypeObj);
+            }
+            else
+            {
+                MessageBox.Show("请选中要删除记录！");
+                return;
+            }
+            if (ret)
+            {
+                MessageBox.Show("操作成功");
+                findType();
+            }
+            else
+            {
+                MessageBox.Show("操作失败");
+            }
+        }
+
 
         private void dgvType_Click(object sender, EventArgs e)
         {
@@ -138,8 +266,139 @@ namespace Insigma.Eyes.PSS.WinUI.Controls
 
         #endregion 商品类型配置管理
 
-        
+        #region 供应商配置
+        private void tsbMFind_Click(object sender, EventArgs e)
+        {
+            findManu();
+        }
 
+        private void findManu()
+        {
+            tbMName.Text = "";
+            tbMPerson.Text = "";
+            tbMTel.Text = "";
+            tbMAddress.Text = "";
+            curManufacturerObj = null;
+            List<ManufacturerModel> listManufacturers = client.GetManufacturers("","","","","").ToList();
+
+            dgvManu.DataSource = listManufacturers;
+            dgvManu.ClearSelection();
+        }
+
+        private void tsbMAdd_Click(object sender, EventArgs e)
+        {
+            bool ret = false;
+            if (curManufacturerObj != null)
+            {
+                curManufacturerObj.Name = tbMName.Text;
+                curManufacturerObj.Person = tbMPerson.Text;
+                curManufacturerObj.Telephone = tbMTel.Text;
+                curManufacturerObj.Address = tbMAddress.Text;
+                //curManufacturerObj.Line = Convert.ToInt32(tbManuLine.Text);
+                ret = client.UpdateManufacturer(curManufacturerObj);
+            }
+            else
+            {
+                curManufacturerObj = new ManufacturerModel();
+                curManufacturerObj.Name = tbMName.Text;
+                curManufacturerObj.Person = tbMPerson.Text;
+                curManufacturerObj.Telephone = tbMTel.Text;
+                curManufacturerObj.Address = tbMAddress.Text;
+                if (client.AddManufacturer(curManufacturerObj) != null) { ret = true; }
+            }
+            if (ret)
+            {
+                MessageBox.Show("操作成功");
+                findManu();
+            }
+            else
+            {
+                MessageBox.Show("操作失败");
+            }
+        }
+
+        private void tsbMDel_Click(object sender, EventArgs e)
+        {
+            bool ret = false;
+            if (curManufacturerObj != null)
+            {
+                if (curManufacturerObj.Status == "1")
+                {
+                    curManufacturerObj.Status = "0";
+                }
+                else
+                {
+                    curManufacturerObj.Status = "1";
+                }
+
+                ret = client.UpdateManufacturer(curManufacturerObj);
+            }
+            else
+            {
+                MessageBox.Show("请选中要删除记录！");
+                return;
+            }
+            if (ret)
+            {
+                MessageBox.Show("操作成功");
+                findManu();
+            }
+            else
+            {
+                MessageBox.Show("操作失败");
+            }
+        }
+
+        private void dgvManu_Click(object sender, EventArgs e)
+        {
+            int selectRows = dgvManu.SelectedRows.Count;
+            if (selectRows > 0)
+            {
+                DataGridViewRow dr = dgvManu.SelectedRows[0];
+                int curID = Convert.ToInt32(dr.Cells["ColMID"].Value);   //Convert.ToInt32(dr.Cells["colId"]);
+                string curName = dr.Cells["ColMName"].Value.ToString();
+                string curPerson = dr.Cells["ColMPerson"].Value == null ? "" : dr.Cells["ColMPerson"].Value.ToString();
+                string curTel = dr.Cells["ColMTel"].Value == null ? "" : dr.Cells["ColMTel"].Value.ToString();
+                string curAddress = dr.Cells["ColMAddress"].Value == null ? "" : dr.Cells["ColMAddress"].Value.ToString();
+                int curLine = Convert.ToInt32(dr.Cells["ColMLine"].Value);
+                string curStatus = dr.Cells["ColMStatus"].Value.ToString() == "激活" ? "1" : "0";
+
+                tbMName.Text = curName;
+                tbMPerson.Text = curPerson;
+                tbMTel.Text = curTel;
+                tbMAddress.Text = curAddress;
+                if (curManufacturerObj == null) { curManufacturerObj = new ManufacturerModel(); }
+                if (curManufacturerObj.ID == curID)
+                {
+                    dgvManu.ClearSelection();
+                    //dgvUnit.SelectedRows[0].Selected = false;
+                    tbMName.Text = "";
+                    tbMPerson.Text = "";
+                    tbMTel.Text = "";
+                    tbMAddress.Text = "";
+                    curManufacturerObj = null;
+                }
+                else
+                {
+                    curManufacturerObj.ID = curID;
+                    curManufacturerObj.Name = curName;
+                    curManufacturerObj.Person = curPerson;
+                    curManufacturerObj.Address = curAddress;
+                    curManufacturerObj.Telephone = curTel;
+                    curManufacturerObj.Status = curStatus;
+                    curManufacturerObj.Line = curLine;
+                }
+            }
+            else
+            {
+                if (curManufacturerObj != null)
+                {
+                    curManufacturerObj = null;
+                }
+            }
+        }
+
+        #endregion 供应商配置
 
         
     }

@@ -31,7 +31,7 @@ namespace Insigma.Eyes.PSS.Model
         /// 供应商电话
         /// </summary>
         [DataMember]
-        public string Telphone { get; set; }
+        public string Telephone { get; set; }
         /// <summary>
         /// 供应商地址
         /// </summary>
@@ -42,5 +42,10 @@ namespace Insigma.Eyes.PSS.Model
         /// </summary>
         [DataMember]
         public string Status { get; set; }
+        /// <summary>
+        /// 显示序号
+        /// </summary>
+        [DataMember]
+        public int Line { get; set; }
     }
 }

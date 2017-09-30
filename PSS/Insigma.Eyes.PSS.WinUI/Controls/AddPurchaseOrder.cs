@@ -112,7 +112,7 @@ namespace Insigma.Eyes.PSS.WinUI.Controls
                 {
                     ManufacturerModel selectedManufacure = combSupplierData[selectedText];
                     textBoxAddress.Text = selectedManufacure.Address;
-                    textBoxTel.Text = selectedManufacure.Telphone;
+                    textBoxTel.Text = selectedManufacure.Telephone;
                     textBoxPerson.Text = selectedManufacure.Person;
                 }
             }

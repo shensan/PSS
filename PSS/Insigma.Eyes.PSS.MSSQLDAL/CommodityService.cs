@@ -104,13 +104,13 @@ namespace Insigma.Eyes.PSS.MSSQLDAL
 
         public bool AddUnitEntity(UnitModel entity)
         {
-            string sql = string.Format(@"insert into unit(name,line) values() values('{0}',{1})", entity.Name, entity.Line);
+            string sql = string.Format(@"insert into unit(name,line) values('{0}',{1})", entity.Name, entity.Line);
             return MSSqlHelper.ExecuteNonQuery(MSSqlHelper.ConStr, CommandType.Text, sql, null) > 0;
         }
 
         public bool UpdateUnitEntity(UnitModel entity)
         {
-            string sql = string.Format(@"update unit set name='{0}',line={1} where ID={2}", entity.Name, entity.Line, entity.ID);
+            string sql = string.Format(@"update unit set name='{0}',line={1},status={2}  where ID={3}", entity.Name, entity.Line,entity.Status, entity.ID);
             return MSSqlHelper.ExecuteNonQuery(MSSqlHelper.ConStr, CommandType.Text, sql, null) > 0;
         }
 
@@ -141,13 +141,13 @@ namespace Insigma.Eyes.PSS.MSSQLDAL
 
         public bool AddTypeEntity(TypeModel entity)
         {
-            string sql = string.Format(@"insert into commodityType(name,line) values() values('{0}',{1})", entity.Name, entity.Line);
+            string sql = string.Format(@"insert into commodityType(name,line) values('{0}',{1})", entity.Name, entity.Line);
             return MSSqlHelper.ExecuteNonQuery(MSSqlHelper.ConStr, CommandType.Text, sql, null) > 0;
         }
 
         public bool UpdateTypeEntity(TypeModel entity)
         {
-            string sql = string.Format(@"update commodityType set name='{0}',line={1} where ID={2}", entity.Name, entity.Line, entity.ID);
+            string sql = string.Format(@"update commodityType set name='{0}',line={1},status={2}  where ID={3}", entity.Name, entity.Line,entity.Status, entity.ID);
             return MSSqlHelper.ExecuteNonQuery(MSSqlHelper.ConStr, CommandType.Text, sql, null) > 0;
         }
 

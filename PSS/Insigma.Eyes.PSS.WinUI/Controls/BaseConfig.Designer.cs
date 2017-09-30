@@ -75,6 +75,13 @@
             this.colTypeStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTypeLine = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColTypeMark = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColMID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColMName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColMPerson = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColMTel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColMAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColMStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColMLine = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvManu)).BeginInit();
@@ -191,15 +198,29 @@
             // 
             // dgvManu
             // 
+            this.dgvManu.AllowUserToAddRows = false;
+            this.dgvManu.AllowUserToDeleteRows = false;
+            this.dgvManu.AllowUserToResizeRows = false;
             this.dgvManu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvManu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColMID,
+            this.ColMName,
+            this.ColMPerson,
+            this.ColMTel,
+            this.ColMAddress,
+            this.ColMStatus,
+            this.ColMLine});
             this.dgvManu.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgvManu.Location = new System.Drawing.Point(3, 42);
             this.dgvManu.MultiSelect = false;
             this.dgvManu.Name = "dgvManu";
             this.dgvManu.ReadOnly = true;
+            this.dgvManu.RowHeadersVisible = false;
             this.dgvManu.RowTemplate.Height = 23;
+            this.dgvManu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvManu.Size = new System.Drawing.Size(757, 150);
             this.dgvManu.TabIndex = 1;
+            this.dgvManu.Click += new System.EventHandler(this.dgvManu_Click);
             // 
             // tsManufacturer
             // 
@@ -220,6 +241,7 @@
             this.tsbMFind.Name = "tsbMFind";
             this.tsbMFind.Size = new System.Drawing.Size(52, 22);
             this.tsbMFind.Text = "查询";
+            this.tsbMFind.Click += new System.EventHandler(this.tsbMFind_Click);
             // 
             // tsbMAdd
             // 
@@ -228,6 +250,7 @@
             this.tsbMAdd.Name = "tsbMAdd";
             this.tsbMAdd.Size = new System.Drawing.Size(52, 22);
             this.tsbMAdd.Text = "添加";
+            this.tsbMAdd.Click += new System.EventHandler(this.tsbMAdd_Click);
             // 
             // tsbMDel
             // 
@@ -236,6 +259,7 @@
             this.tsbMDel.Name = "tsbMDel";
             this.tsbMDel.Size = new System.Drawing.Size(52, 22);
             this.tsbMDel.Text = "删除";
+            this.tsbMDel.Click += new System.EventHandler(this.tsbMDel_Click);
             // 
             // groupBox2
             // 
@@ -330,6 +354,7 @@
             this.tsbTypeAdd.Name = "tsbTypeAdd";
             this.tsbTypeAdd.Size = new System.Drawing.Size(52, 22);
             this.tsbTypeAdd.Text = "添加";
+            this.tsbTypeAdd.Click += new System.EventHandler(this.tsbTypeAdd_Click);
             // 
             // tsbTypeDel
             // 
@@ -338,6 +363,7 @@
             this.tsbTypeDel.Name = "tsbTypeDel";
             this.tsbTypeDel.Size = new System.Drawing.Size(52, 22);
             this.tsbTypeDel.Text = "删除";
+            this.tsbTypeDel.Click += new System.EventHandler(this.tsbTypeDel_Click);
             // 
             // groupBox1
             // 
@@ -409,6 +435,7 @@
             this.colId.DataPropertyName = "id";
             this.colId.HeaderText = "ID";
             this.colId.Name = "colId";
+            this.colId.ReadOnly = true;
             this.colId.Width = 50;
             // 
             // colName
@@ -416,6 +443,7 @@
             this.colName.DataPropertyName = "name";
             this.colName.HeaderText = "名称";
             this.colName.Name = "colName";
+            this.colName.ReadOnly = true;
             this.colName.Width = 150;
             // 
             // colStatus
@@ -423,12 +451,14 @@
             this.colStatus.DataPropertyName = "status";
             this.colStatus.HeaderText = "状态";
             this.colStatus.Name = "colStatus";
+            this.colStatus.ReadOnly = true;
             // 
             // colUnitLine
             // 
             this.colUnitLine.DataPropertyName = "line";
             this.colUnitLine.HeaderText = "序号";
             this.colUnitLine.Name = "colUnitLine";
+            this.colUnitLine.ReadOnly = true;
             this.colUnitLine.Width = 60;
             // 
             // ColUnitMark
@@ -436,6 +466,7 @@
             this.ColUnitMark.DataPropertyName = "Mark";
             this.ColUnitMark.HeaderText = "Mark";
             this.ColUnitMark.Name = "ColUnitMark";
+            this.ColUnitMark.ReadOnly = true;
             this.ColUnitMark.Visible = false;
             // 
             // tsUnit
@@ -466,6 +497,7 @@
             this.tsbUnitAdd.Name = "tsbUnitAdd";
             this.tsbUnitAdd.Size = new System.Drawing.Size(52, 22);
             this.tsbUnitAdd.Text = "添加";
+            this.tsbUnitAdd.Click += new System.EventHandler(this.tsbUnitAdd_Click);
             // 
             // tsbUnitDel
             // 
@@ -474,6 +506,7 @@
             this.tsbUnitDel.Name = "tsbUnitDel";
             this.tsbUnitDel.Size = new System.Drawing.Size(52, 22);
             this.tsbUnitDel.Text = "删除";
+            this.tsbUnitDel.Click += new System.EventHandler(this.tsbUnitDel_Click);
             // 
             // tabControl1
             // 
@@ -514,6 +547,7 @@
             this.colTypeStatus.HeaderText = "状态";
             this.colTypeStatus.Name = "colTypeStatus";
             this.colTypeStatus.ReadOnly = true;
+            this.colTypeStatus.Width = 80;
             // 
             // colTypeLine
             // 
@@ -530,6 +564,55 @@
             this.ColTypeMark.Name = "ColTypeMark";
             this.ColTypeMark.ReadOnly = true;
             this.ColTypeMark.Visible = false;
+            // 
+            // ColMID
+            // 
+            this.ColMID.DataPropertyName = "id";
+            this.ColMID.HeaderText = "ID";
+            this.ColMID.Name = "ColMID";
+            this.ColMID.ReadOnly = true;
+            // 
+            // ColMName
+            // 
+            this.ColMName.DataPropertyName = "name";
+            this.ColMName.HeaderText = "名称";
+            this.ColMName.Name = "ColMName";
+            this.ColMName.ReadOnly = true;
+            // 
+            // ColMPerson
+            // 
+            this.ColMPerson.DataPropertyName = "person";
+            this.ColMPerson.HeaderText = "联系人";
+            this.ColMPerson.Name = "ColMPerson";
+            this.ColMPerson.ReadOnly = true;
+            // 
+            // ColMTel
+            // 
+            this.ColMTel.DataPropertyName = "telephone";
+            this.ColMTel.HeaderText = "电话";
+            this.ColMTel.Name = "ColMTel";
+            this.ColMTel.ReadOnly = true;
+            // 
+            // ColMAddress
+            // 
+            this.ColMAddress.DataPropertyName = "address";
+            this.ColMAddress.HeaderText = "地址";
+            this.ColMAddress.Name = "ColMAddress";
+            this.ColMAddress.ReadOnly = true;
+            // 
+            // ColMStatus
+            // 
+            this.ColMStatus.DataPropertyName = "status";
+            this.ColMStatus.HeaderText = "状态";
+            this.ColMStatus.Name = "ColMStatus";
+            this.ColMStatus.ReadOnly = true;
+            // 
+            // ColMLine
+            // 
+            this.ColMLine.DataPropertyName = "line";
+            this.ColMLine.HeaderText = "序号";
+            this.ColMLine.Name = "ColMLine";
+            this.ColMLine.ReadOnly = true;
             // 
             // BaseConfig
             // 
@@ -606,6 +689,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colTypeStatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTypeLine;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColTypeMark;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColMID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColMName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColMPerson;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColMTel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColMAddress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColMStatus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColMLine;
 
     }
 }

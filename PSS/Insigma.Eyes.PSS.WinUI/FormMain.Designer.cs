@@ -52,7 +52,7 @@
             this.toolStripButton5});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(870, 74);
+            this.toolStrip1.Size = new System.Drawing.Size(783, 74);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -108,17 +108,16 @@
             // 
             // panelContainer
             // 
-            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContainer.Location = new System.Drawing.Point(0, 74);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(870, 493);
+            this.panelContainer.Size = new System.Drawing.Size(780, 560);
             this.panelContainer.TabIndex = 1;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(870, 567);
+            this.ClientSize = new System.Drawing.Size(783, 635);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.toolStrip1);
             this.MaximizeBox = false;

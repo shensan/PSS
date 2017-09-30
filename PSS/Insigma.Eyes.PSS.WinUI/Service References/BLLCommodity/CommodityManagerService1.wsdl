@@ -110,6 +110,24 @@
   <wsdl:message name="ICommodityManagerService_GetManufacturers_ExceptionFault_FaultMessage">
     <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/System" name="detail" element="q10:Exception" />
   </wsdl:message>
+  <wsdl:message name="ICommodityManagerService_AddManufacturer_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddManufacturer" />
+  </wsdl:message>
+  <wsdl:message name="ICommodityManagerService_AddManufacturer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddManufacturerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommodityManagerService_AddManufacturer_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/System" name="detail" element="q11:Exception" />
+  </wsdl:message>
+  <wsdl:message name="ICommodityManagerService_UpdateManufacturer_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateManufacturer" />
+  </wsdl:message>
+  <wsdl:message name="ICommodityManagerService_UpdateManufacturer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateManufacturerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICommodityManagerService_UpdateManufacturer_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/System" name="detail" element="q12:Exception" />
+  </wsdl:message>
   <wsdl:portType name="ICommodityManagerService">
     <wsdl:operation name="GetCommodities">
       <wsdl:input wsaw:Action="http://tempuri.org/ICommodityManagerService/GetCommodities" message="tns:ICommodityManagerService_GetCommodities_InputMessage" />
@@ -168,6 +186,16 @@
       <wsdl:input wsaw:Action="http://tempuri.org/ICommodityManagerService/GetManufacturers" message="tns:ICommodityManagerService_GetManufacturers_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICommodityManagerService/GetManufacturersResponse" message="tns:ICommodityManagerService_GetManufacturers_OutputMessage" />
       <wsdl:fault wsaw:Action="http://tempuri.org/ICommodityManagerService/GetManufacturersExceptionFault" name="ExceptionFault" message="tns:ICommodityManagerService_GetManufacturers_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddManufacturer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommodityManagerService/AddManufacturer" message="tns:ICommodityManagerService_AddManufacturer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommodityManagerService/AddManufacturerResponse" message="tns:ICommodityManagerService_AddManufacturer_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICommodityManagerService/AddManufacturerExceptionFault" name="ExceptionFault" message="tns:ICommodityManagerService_AddManufacturer_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateManufacturer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICommodityManagerService/UpdateManufacturer" message="tns:ICommodityManagerService_UpdateManufacturer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICommodityManagerService/UpdateManufacturerResponse" message="tns:ICommodityManagerService_UpdateManufacturer_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICommodityManagerService/UpdateManufacturerExceptionFault" name="ExceptionFault" message="tns:ICommodityManagerService_UpdateManufacturer_ExceptionFault_FaultMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ICommodityManagerService" type="tns:ICommodityManagerService">
@@ -300,6 +328,30 @@
     </wsdl:operation>
     <wsdl:operation name="GetManufacturers">
       <soap:operation soapAction="http://tempuri.org/ICommodityManagerService/GetManufacturers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddManufacturer">
+      <soap:operation soapAction="http://tempuri.org/ICommodityManagerService/AddManufacturer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateManufacturer">
+      <soap:operation soapAction="http://tempuri.org/ICommodityManagerService/UpdateManufacturer" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

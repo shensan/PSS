@@ -173,4 +173,32 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="AddManufacturer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Insigma.Eyes.PSS.Model" minOccurs="0" name="oneManufacturer" nillable="true" type="q14:ManufacturerModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddManufacturerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Insigma.Eyes.PSS.Model" minOccurs="0" name="AddManufacturerResult" nillable="true" type="q15:ManufacturerModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateManufacturer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Insigma.Eyes.PSS.Model" minOccurs="0" name="manufacturer" nillable="true" type="q16:ManufacturerModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateManufacturerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateManufacturerResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

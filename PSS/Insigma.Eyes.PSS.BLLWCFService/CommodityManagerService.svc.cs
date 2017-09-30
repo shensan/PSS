@@ -134,7 +134,7 @@ namespace Insigma.Eyes.PSS.BLLWCFService
             if (string.IsNullOrWhiteSpace(oneUnit.Name))
             {
                 Exception oe = new Exception();
-                throw new FaultException<Exception>(oe, "商品名称不能为空");
+                throw new FaultException<Exception>(oe, "商品单位名称不能为空");
             }
             return dataFactory.CommdityDal.AddUnitEntity(oneUnit);
         }
@@ -145,7 +145,7 @@ namespace Insigma.Eyes.PSS.BLLWCFService
             if (string.IsNullOrWhiteSpace(oneUnit.Name))
             {
                 Exception oe = new Exception();
-                throw new FaultException<Exception>(oe, "商品名称不能为空");
+                throw new FaultException<Exception>(oe, "商品单位名称不能为空");
             }
             //return new OracleDAL.CommodityService().UpdateEntity(commodity) ;
             return dataFactory.CommdityDal.UpdateUnitEntity(oneUnit);
@@ -168,7 +168,7 @@ namespace Insigma.Eyes.PSS.BLLWCFService
             if (string.IsNullOrWhiteSpace(oneType.Name))
             {
                 Exception oe = new Exception();
-                throw new FaultException<Exception>(oe, "商品名称不能为空");
+                throw new FaultException<Exception>(oe, "商品类型名称不能为空");
             }
             return dataFactory.CommdityDal.AddTypeEntity(oneType);
         }
@@ -179,7 +179,7 @@ namespace Insigma.Eyes.PSS.BLLWCFService
             if (string.IsNullOrWhiteSpace(oneType.Name))
             {
                 Exception oe = new Exception();
-                throw new FaultException<Exception>(oe, "商品名称不能为空");
+                throw new FaultException<Exception>(oe, "商品类型名称不能为空");
             }
             //return new OracleDAL.CommodityService().UpdateEntity(commodity) ;
             return dataFactory.CommdityDal.UpdateTypeEntity(oneType);
@@ -224,13 +224,27 @@ namespace Insigma.Eyes.PSS.BLLWCFService
             return dataFactory.ManufacturerDal.GetEntities(sqlWhere).ToArray();
         }
 
+        public ManufacturerModel AddManufacturer(ManufacturerModel oneManufacturer)
+        {
+            if (string.IsNullOrWhiteSpace(oneManufacturer.Name))
+            {
+                Exception oe = new Exception();
+                throw new FaultException<Exception>(oe, "商品名称不能为空");
+            }
+            return dataFactory.ManufacturerDal.AddEntity(oneManufacturer);
+        }
 
-        //public ManufacturerModel AddManufacturer(ManufacturerModel oneManufacturer)
-        //{ }
 
+        public bool UpdateManufacturer(ManufacturerModel oneManufacturer)
+        {
+            if (string.IsNullOrWhiteSpace(oneManufacturer.Name))
+            {
+                Exception oe = new Exception();
+                throw new FaultException<Exception>(oe, "商品名称不能为空");
+            }
 
-        //public bool UpdateManufacturer(Model.ManufacturerModel manufacturer)
-        //{ }
+            return dataFactory.ManufacturerDal.UpdateEntity(oneManufacturer);
+        }
         #endregion 处理基本数据中供应商与厂商数据
     }
 }

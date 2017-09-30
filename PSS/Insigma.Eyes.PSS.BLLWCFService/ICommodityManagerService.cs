@@ -58,12 +58,12 @@ namespace Insigma.Eyes.PSS.BLLWCFService
         [FaultContract(typeof(Exception))]
         ManufacturerModel[] GetManufacturers(string name, string person, string tel, string addr, string status);
 
-        //[OperationContract]
-        //[FaultContract(typeof(Exception))]
-        //ManufacturerModel AddManufacturer(ManufacturerModel oneManufacturer);
+        [OperationContract]
+        [FaultContract(typeof(Exception))]
+        ManufacturerModel AddManufacturer(ManufacturerModel oneManufacturer);
 
-        //[OperationContract]
-        //[FaultContract(typeof(Exception))]
-        //bool UpdateManufacturer(Model.ManufacturerModel manufacturer);
+        [OperationContract]
+        [FaultContract(typeof(Exception))]
+        bool UpdateManufacturer(Model.ManufacturerModel manufacturer);
     }
 }
